@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agência criAtiva: Transformando ideias em sucesso com estratégia e criatividade.">
+    <meta name="keywords" content="Agência, criAtiva, Marketing Digital, Mídias Sociais, Criação de Conteúdo">
+    <title>Agência criAtiva - Transformando Ideias em Sucesso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Cor clara */
+            color: #333;
+        }
+        header {
+            background-color: #6a0dad; /* Roxo */
+            padding: 10px 20px;
+            border-bottom: 2px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            margin: 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffcc00; /* Amarelo */
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff69b4; /* Rosa */
+        }
+        section {
+            padding: 20px;
+        }
+        .hero {
+            background: linear-gradient(45deg, #ff69b4, #ffcc00); /* Rosa e Amarelo */
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .hero h2 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: transform 0.3s, text-shadow 0.3s;
+        }
+        .hero h2:hover {
+            transform: translateX(-10px) translateY(-10px);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .portfolio {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 10px;
+            border: 2px solid #ff69b4; /* Rosa */
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .portfolio::-webkit-scrollbar {
+            height: 8px;
+        }
+        .portfolio::-webkit-scrollbar-thumb {
+            background: #ff69b4; /* Rosa */
+            border-radius: 10px;
+        }
+        .portfolio::-webkit-scrollbar-thumb:hover {
+            background: #ff1493; /* Rosa mais escuro */
+        }
+        .portfolio-item {
+            flex: none;
+            scroll-snap-align: start;
+            width: 300px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #ffcc00; /* Amarelo */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .portfolio-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .contact-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #6a0dad;
+        }
+        .contact-form button {
+            background-color: #6a0dad; /* Roxo */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #4a0d8f;
+        }
+        footer {
+            background-color: #6a0dad;
+            padding: 10px 20px;
+            border-top: 2px solid #ddd;
+            text-align: center;
+            color: #fff;
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #6a0dad; /* Roxo */
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            display: none;
+            transition: opacity 0.3s;
+        }
+        .scroll-to-top:hover {
+            background-color: #4a0d8f; /* Roxo mais escuro */
+        }
+        .scroll-to-top:after {
+            content: "Subir";
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        window.addEventListener('scroll', function() {
+            const scrollToTop = document.querySelector('.scroll-to-top');
+            if (window.scrollY > 200) {
+                scrollToTop.style.display = 'block';
+            } else {
+                scrollToTop.style.display = 'none';
+            }
+        });
+        
+        document.querySelector('.scroll-to-top').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Agência criAtiva</h1>
+        <nav aria-label="Menu de navegação">
+            <a href="index.html">Início</a>
+            <a href="nossos-serviços.html">Nossos Serviços</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contato">Contato</a>
+            <a href="#trabalhe-conosco">Trabalhe Conosco</a>
+            <a href="https://wa.me/5541995028155" target="_blank">WhatsApp</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>Bem-vindo à Agência criAtiva</h2>
+        <p>Transformando ideias em sucesso com estratégia e criatividade.</p>
+    </section>
+    <section id="sobre">
+        <h2>Sobre a Agência</h2>
+        <p>A Agência criAtiva é especializada em gestão de mídias sociais, marketing digital e criação de conteúdo. Nossa missão é ajudar empresas e indivíduos a alcançar seus objetivos de forma inovadora e eficaz.</p>
+        <h3>Depoimentos</h3>
+        <p>"A Agência criAtiva transformou nossa presença online e aumentou significativamente nossas vendas." - Cliente Satisfeito</p>
+    </section>
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <div class="portfolio">
+            <div class="portfolio-item">
+                <img src="imagem1.jpg" alt="Imagem do Projeto 1">
+                <h3>Projeto 1</h3>
+                <p>Descrição detalhada do projeto 1, incluindo os objetivos e resultados alcançados.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="imagem2.jpg" alt="Imagem do Projeto 2">
+                <h3>Projeto 2</h3>
+                <p>Descrição detalhada do projeto 2, destacando a criatividade e eficácia das soluções.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="imagem3.jpg" alt="Imagem do Projeto 3">
+                <h3>Projeto 3</h3>
+                <p>Descrição detalhada do projeto 3, mostrando a inovação e o impacto gerado.</p>
+            </div>
+            <!-- Adicione mais itens de portfólio aqui -->
+        </div>
+    </section>
+    <section id="contato">
+        <h2>Contato</h2>
+        <div class="contact-form">
+            <form action="https://formspree.io/your-email" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <section id="trabalhe-conosco">
+        <h2>Trabalhe Conosco</h2>
+        <p>Quer fazer parte da nossa equipe? Envie seu currículo para <a href="mailto:trabalhe@criativa.com">trabalhe@criativa.com</a></p>
+    </section>
+    <div class="scroll-to-top"></div>
+    <footer>
+        <p>&copy; 2024 Agência criAtiva. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
